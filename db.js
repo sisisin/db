@@ -3,7 +3,7 @@ var RGList = new Object();	//"No":[name,ver,img,qr]
 var FVList = new Object();	//"ID":[No,No,No,No]
 var qr_counter = 0;
 Read_localStorage();
-$('.m_playdate p').text('v0.38'+' RegistQR:'+Object.keys(RGList).length);
+$('.m_playdate p').text('v0.39'+' RegistQR:'+Object.keys(RGList).length);
 
 $(function() {
 	console.log('***TEST***');
@@ -360,7 +360,7 @@ function qrcode_option(){
 	return options;
 };
 function add_area(){
-	$('head link:last').after('<link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/3625132/bookmarklet/style.css">');
+	$('head link:last').after('<link rel="stylesheet" href="https://rawgit.com/mryooo/db/master/style.css">');
 
 	$('.m_dress').append("<script>function loadDetail(url){$('.l_detailCol').load(url,null,function(){$('.m_btn').click(function(){$('.l_detailCol').remove();$('.m_dress').append('<div class=l_detailCol></div>');});});}</script>");
 	//カード表示エリア
