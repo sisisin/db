@@ -1,0 +1,294 @@
+html {
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+}
+
+@media screen and (max-width: 575px) {
+.m_card_area{
+    overflow: scroll;
+    }
+.m_btn-qread,.m_btn-pos {
+    width: 100%;
+    font-size: x-large;
+}
+}
+.m_inner{
+    padding-bottom: 10em;
+}
+.m_btn-qread,.m_btn-pos,.m_btn-binder,.m_btn-fav {
+    text-shadow: #FFF 1px 1px 0px, #FFF -1px 1px 0px, #FFF 1px -1px 0px, #FFF -1px -1px 0px;
+    width: 83%;
+    text-align: center;
+    padding: 10px;
+    font-size: x-large;
+    height: initial;
+    background: linear-gradient(to bottom, #fde 5%, #fac 100%);
+    border:1px solid #FF6CC0;
+    display:inline-block;
+    cursor:pointer;
+    font-family:Arial;
+    font-weight:bold;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #9752cc;
+    -webkit-border-radius: 6px;
+}
+.l_nav li.m_btn-qread,li.m_btn-pos,li.m_btn-binder,li.m_btn-fav{
+    font-family: "遊ゴシック","メイリオ", "ヒラギノ角ゴ Pro W3", "Osaka", "ＭＳ Ｐゴシック", Arial, sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 42px;
+    text-shadow: #FFF 1px 1px 0px, #FFF -1px 1px 0px, #FFF 1px -1px 0px, #FFF -1px -1px 0px;
+}
+
+.m_card_area .m_btn .m_close {
+    font-size: x-large;
+    color: #FFF;
+    font-weight:bold;
+    cursor:pointer;
+    background-color: #FF6CC0;
+    z-index:10000;
+}
+.m_card_area {
+    display: none;
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    margin-bottom: 0.5%;
+    z-index: 1002;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    margin: 0;
+}
+.m_dress_area {
+    padding-top: 37px;
+}
+.m_close {
+    position: fixed;
+    width: 100%;
+
+}
+#btn_pagetop {
+    z-index: 1001;
+}
+#QR_box,#QR_display {
+    color: #FFF;
+    display: none;
+    width: 100%;
+    height:100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 20000;
+    background: rgba(0,0,0,0.7);
+    font-size: 200%;
+}
+#QR_display {
+    padding-top: 10px;
+}
+#Fav_display {
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 20000;
+    list-style-type: none;
+    padding: 5px;
+    display: none;
+    text-align: center;
+}
+#Fav_display>div{
+    display: inline-block;
+}
+#Fav_display img{
+    width: 70px;
+    padding: 5px;
+}
+#Fav_display .m_dress_card_name{
+    text-align: center;
+}
+#fav_btn_set{
+    width: 100%;
+}
+#QR_box textarea {
+    width: 95%;
+    height: 30%;
+    margin-top:10px;
+}
+#qr_result {
+    background-color: transparent;
+    color: #FFF;
+}
+#close,#qrimp,#qrexp,#SetFav,#SetClose {
+    background: #eeeeee;
+    color: #777;
+    width: 100px;
+    margin: 5px;
+    text-align: center;
+    font-size: 15px;
+    padding:5px 0 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+}
+#QR_display canvas {
+    display: block;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #FFF;
+}
+#QR_display .close {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 50%;/* 50%でもOK */
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #FF6CC0;/* 円の色 */
+    font-size: xx-large;
+    position: fixed;
+    right: 20px;
+}
+.m_dress_card {
+    position: relative;
+    z-index: 1001;
+}
+li canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45%;
+    z-index: 1000;
+    opacity: 0.5;
+}
+.l_snsset{
+    display: none;
+}
+h1{
+    z-index: 1;
+}
+dd{
+    position: absolute;
+    bottom: 10%;
+    z-index: 1;
+}
+dd img{
+    width: 20%;
+}
+/* 属性ソートチェックボックス */
+.dress_type,.dress_rare{
+    text-align: center;
+}
+.chkbox{
+    margin:1px 4px;
+    padding:4px 0;
+    position:relative;
+    cursor:pointer;
+    display:inline-block;
+    vertical-align:middle
+}
+.chkbox input{
+    position:absolute;opacity:0
+}
+.chkbox span{
+    position:relative;
+    display:inline-block;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    background:rgba(250,250,250,.25);border:1px solid #dae0e8
+}
+.chkbox span:hover{
+    background:rgba(250,250,250,.75)
+}
+.chkbox span:after{
+    content:"";
+    position:absolute;top:3px;right:3px;
+    bottom:3px;
+    left:3px;
+    border-radius:50%;
+    background-color:#fff;
+    opacity:0;
+    -webkit-transition:all .15s ease-out;
+    transition:all .15s ease-out;
+    -webkit-transform:scale(.5);
+    transform:scale(.5) -webkit-box-shadow: 0 2px 5px #999999;
+    box-shadow:0px 1px 5px #999999;
+}
+.chkbox input:checked+span:after{
+    opacity:1;
+    -webkit-transform:scale(1);
+    transform:scale(1);
+    background-color:#eee
+}
+.chkbox-qt input:checked+span:after{background-color:#FAA}
+.chkbox-co input:checked+span:after{background-color:#6AF}
+.chkbox-se input:checked+span:after{background-color:#A9E}
+.chkbox-po input:checked+span:after{background-color:#FB8}
+
+.chkbox-c span,.chkbox-p span,.chkbox-r span,.chkbox-n span{
+    border-radius:20%;
+    width:initial;
+    height:initial;
+    font-size: xx-large;
+    color: #c99;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.chkbox-c input:checked+span:after,.chkbox-p input:checked+span:after,.chkbox-r input:checked+span:after,.chkbox-n input:checked+span:after{
+    background-color:rgba(250,250,250,0);
+    border-radius: 20%;
+    width:initial;
+    height:initial;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.chkbox-c input:checked+span:after{border:3px solid #7ec}
+.chkbox-p input:checked+span:after{border:3px solid #eb0}
+.chkbox-r input:checked+span:after{border:3px solid #ccc}
+.chkbox-n input:checked+span:after{border:3px solid #c66}
+
+
+.favorite_list {
+    position: relative;
+}
+.favorite_list .m_dress_card {
+    width: 21.5%;
+}
+.favorite_list .m_dress_card_name {
+    font-size: 150%;
+}
+.fav_delete{
+    width: 9%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #FF6CC0;
+    font-size: 350%;
+    position: absolute;
+    text-align: center;
+    z-index: 1002;
+    right: -15px;
+    color: #FFF;
+}
+.indicator{
+    width: 80%;
+    background: #EEE;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #FF6CC0;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.bar{
+    background: #FF6CC0;
+    color: #000;
+}
